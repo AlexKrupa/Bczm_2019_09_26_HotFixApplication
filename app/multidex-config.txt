@@ -1,0 +1,2 @@
+com/example/hotfix/MainActivity.class
+com/example/hotfix/MyApplication.class
