@@ -55,9 +55,10 @@ public class FixDexUtil {
         for (File dexFile : loadedDex) {
             //DexClassLoader构造参数
             //String dexPath,dex路径
-            // String optimizedDirectory,
-            // String librarySearchPath, so路径
-            // ClassLoader parent
+            // String optimizedDirectory, 制定输出dex优化后的odex文件，可以为null
+            // String librarySearchPath, so路径 动态库路径（将被添加到app动态库搜索路径列表中）
+            // ClassLoader parent 制定父类加载器，以保证双亲委派机制从而实现每个类只加载一次。
+
             DexClassLoader dexClassLoader = new DexClassLoader(
                     dexFile.getAbsolutePath(),
                     optimizeDir,
